@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <button onclick="typeWriter(); playStart();" >Start</button>
+    <audio id="Ending">
+        <source src="Menu_credits.wav" type="audio/wav">
+    </audio>
+    <audio id="Start">
+        <source src="BackGround-music.wav" type="audio/wav">
+    </audio>
+    <audio id="Skull">
+        <source src="Soul-Stone-Effect.wav" type="audio/wav">
+    </audio>
+    <audio id="SoulStone">
+        <source src ="Soul-Stone-effect2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id = "IronDoor">
+        <source src ="iron-door.wav" type="audio/wav">
+    </audio>
+    <audio id = "PickSword">
+        <source src = "pick-up-sword.wav" type="audio/wav">
+    </audio>
+    <audio id="Screaming">
+        <source src ="Ghost-Scream.wav" type="audio/wav">
+    </audio>
+    <audio id="Whisper">
+        <source src ="whisper.wav" type="audio/wav">
+    </audio>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = "Hello";
+var speed = 70;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+    
+  }
+}
+    function playSkull() {
+          var audio = document.getElementById("Skull");
+          audio.play();
+    }
+    function playStart() {
+          var audio = document.getElementById("Start");
+          audio.play();
+    }
+    function playEnding() {
+        var audio = document.getElementById("Ending");
+        audio.play();
+    }
+    function playSoulStone() {
+        var audio = document.getElementById("SoulStone");
+        audio.play();
+    }
+    function playIronDoor() {
+        var audio = document.getElementById("IronDoor");
+        audio.play();
+    }
+    function playPickSword() {
+        var audio = document.getElementById("PickSword");
+        audio.play();
+    }
+    function playScreaming() {
+        var audio = document.getElementById("Screaming");
+        audio.play();
+    }
+    function playWhisper() {
+        var audio = document.getElementById("Whisper");
+        audio.play();
+    }
+</script>
+</html>
